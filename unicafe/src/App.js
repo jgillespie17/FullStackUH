@@ -15,20 +15,25 @@ const Statistics = (props) => {
   return(
     <>
     <h2>Statistics</h2>
-    <Statistic text="good" value={props.stats.good}/>
-    <Statistic text="neutral" value={props.stats.neutral}/>
-    <Statistic text="bad" value={props.stats.bad}/>
-    <Statistic text="total" value={total}/>
-    <Statistic text="average" value={average}/>
-    <Statistic text="positive" value={positive} endtext="%"/>
+    <table>
+      <tbody>
+        <Statistic text="good" value={props.stats.good}/>
+        <Statistic text="neutral" value={props.stats.neutral}/>
+        <Statistic text="bad" value={props.stats.bad}/>
+        <Statistic text="total" value={total}/>
+        <Statistic text="average" value={average}/>
+        <Statistic text="positive" value={positive} endtext="%"/>
+      </tbody>
+    </table>
     </>
   )
 }
 const Statistic = (props) => {
   return(
-  <p>
-    {props.text} {props.value} {props.endtext}
-  </p>
+  <tr>
+    <td>{props.text}</td>
+    <td>{props.value} {props.endtext}</td>
+  </tr>
   )
 }
 

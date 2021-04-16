@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-
-
 const DisplayForm = (props) => {
   return(
   <form onSubmit={props.addName}>
